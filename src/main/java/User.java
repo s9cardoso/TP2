@@ -34,7 +34,7 @@ public class User {
     public String getAddress() {
         return address;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }

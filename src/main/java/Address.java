@@ -1,10 +1,10 @@
 public class Address {
 
-    private String streetname;
+    private String streetname,postalcode;
 
-    private int doorno, postalcode;
+    private int doorno;
 
-    public Address(String streetname, int doorno, int postalcode) {
+    public Address(String streetname, int doorno, String postalcode) {
         this.streetname = streetname;
         this.doorno = doorno;
         this.postalcode = postalcode;
@@ -18,7 +18,7 @@ public class Address {
         return doorno;
     }
 
-    public int getPostalcode() {
+    public String getPostalcode() {
         return postalcode;
     }
 
@@ -30,7 +30,7 @@ public class Address {
         this.doorno = doorno;
     }
 
-    public void setPostalcode(int postalcode) {
+    public void setPostalcode(String postalcode) {
         this.postalcode = postalcode;
     }
 }

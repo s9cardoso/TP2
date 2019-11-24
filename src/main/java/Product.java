@@ -1,8 +1,10 @@
 public class Product {
-    private String name, description, picture, category, price, unitytype;
+    private String name, description, picture, category, unitytype;
     private Category categoria1;
 
-    public Product(String name, String description, String picture, String category, String price, String unitytype) {
+    private float price;
+
+    public Product(String name, String description, String picture, String category, float price, String unitytype) {
         this.name = name;
         this.description = description;
         this.picture = picture;
@@ -28,7 +30,7 @@ public class Product {
         return category;
     }
 
-    public String getPrice() {
+    public float getPrice() {
         return price;
     }
 
@@ -60,7 +62,7 @@ public class Product {
         this.category = category;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 

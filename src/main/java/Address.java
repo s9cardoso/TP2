@@ -1,8 +1,10 @@
 public class Address {
 
-    private String streetname, doorno, postalcode;
+    private String streetname;
 
-    public Address(String streetname, String doorno, String postalcode) {
+    private int doorno, postalcode;
+
+    public Address(String streetname, int doorno, int postalcode) {
         this.streetname = streetname;
         this.doorno = doorno;
         this.postalcode = postalcode;
@@ -12,11 +14,11 @@ public class Address {
         return streetname;
     }
 
-    public String getDoorno() {
+    public int getDoorno() {
         return doorno;
     }
 
-    public String getPostalcode() {
+    public int getPostalcode() {
         return postalcode;
     }
 
@@ -24,11 +26,11 @@ public class Address {
         this.streetname = streetname;
     }
 
-    public void setDoorno(String doorno) {
+    public void setDoorno(int doorno) {
         this.doorno = doorno;
     }
 
-    public void setPostalcode(String postalcode) {
+    public void setPostalcode(int postalcode) {
         this.postalcode = postalcode;
     }
 }

@@ -16,6 +16,9 @@ public class User {
     public Address getEndereco1() {
         return endereco1;
     }
+    public String getStreetName() {
+        return endereco1.getStreetname();
+    }
 
     public String getName() {
         return name;

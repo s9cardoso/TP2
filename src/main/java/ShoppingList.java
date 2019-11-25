@@ -50,6 +50,14 @@ public class ShoppingList {
     public boolean remProduct(Product product){
         return remProduct(product);
     }
+    public void AddProductToShoppingCart(Product product){
+        ProductList1.add(product);
+    }
+
+    public void RemProductFromShoppingCart(Product product){
+        ProductList1.add(product);
+    }
+
 
 
 

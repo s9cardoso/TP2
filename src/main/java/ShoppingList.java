@@ -24,7 +24,15 @@ public class ShoppingList {
     public void setProductList2(List<Product>Productlist2){
         Productlist2=Productlist2;
     }
+    public float getTotalOfProducts(){
+        float total;
+        total = ProductList1.size() + ProductList2.size();
+        return total;
 
+    }
+    public List<Product> getTotalOfProductsOnShoppingCart(){
+        return ProductList2;
+    }
 
 
     public String getListName(){
@@ -51,6 +59,8 @@ public class ShoppingList {
         percentagem = (list2*100) / list1;
         return percentagem;
     }
+
+
     public boolean addProduct(Product product){
         boolean success = ProductList1.add(product);
         return success;

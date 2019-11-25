@@ -10,10 +10,9 @@ public class ShoppingList {
     private List<Product>ProductList2 = new ArrayList<>();
     private List<User>UserList = new ArrayList<>();
 
-    public ShoppingList(String name, User user, User userlist, List<Product> productList1, List<Product> productList2, List<User> userList) {
+    public ShoppingList(String name, User user, List<Product> productList1, List<Product> productList2, List<User> userList) {
         this.name = name;
         this.user = user;
-        this.userlist = userlist;
         ProductList1 = productList1;
         ProductList2 = productList2;
         UserList = userList;

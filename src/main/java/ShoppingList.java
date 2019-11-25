@@ -43,19 +43,30 @@ public class ShoppingList {
         this.user = user;
     }
 
+
+    public float getPercentageCompleted(){
+        float percentagem = 0;
+        int list1 = ProductList1.size();
+        int list2 = ProductList2.size();
+        percentagem = (list2*100) / list1;
+        return percentagem;
+    }
     public boolean addProduct(Product product){
         boolean success = ProductList1.add(product);
         return success;
     }
+
+
     public boolean remProduct(Product product){
         return remProduct(product);
     }
-    public void AddProductToShoppingCart(Product product){
-        ProductList1.add(product);
+    public boolean AddProductToShoppingCart(Product product){
+        boolean success = ProductList2.add(product);
+        return success;
     }
 
-    public void RemProductFromShoppingCart(Product product){
-        ProductList1.add(product);
+    public boolean remProductFromShoppingCart(Product product){
+        return remProductFromShoppingCart(product);
     }
 
 

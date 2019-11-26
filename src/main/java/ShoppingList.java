@@ -23,14 +23,29 @@ public class ShoppingList {
     public void setProductList2(List<Product>Productlist2){
         Productlist2=Productlist2;
     }
-    public float getTotalOfProducts(){
-        float total;
-        total = ProductList1.size() + ProductList2.size();
+    public int getTotalOfProducts(){
+        int total = ProductList1.size();
         return total;
-
     }
-    public List<Product> getTotalOfProductsOnShoppingCart(){
-        return ProductList2;
+
+    public int getTotalOfProductsOnShoppingCart() {
+        int totalshop = ProductList2.size();
+        return totalshop;
+    }
+
+    public double getTotalPrice(){
+        double total = 0;
+        for(int i = 0;i<ProductList1.size();i++){
+            total = total + ProductList1.get(i).getPrice();
+        }
+        return total;
+    }
+    public double GetTotalPriceOnCart(){
+        double total = 0;
+        for (int i = 0;i<ProductList2.size();i++){
+            total = total + ProductList2.get(i).getPrice();
+        }
+        return total;
     }
 
 

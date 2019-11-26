@@ -13,8 +13,8 @@ public class ShoppingList {
     public ShoppingList(String name, User user, List<Product> productList1, List<Product> productList2, List<User> userList) {
         this.name = name;
         this.user = user;
-        ProductList1 = productList1;
-        ProductList2 = productList2;
+        ProductList1 = productList1;//lista de compras
+        ProductList2 = productList2;//carrinho
         UserList = userList;
     }
     public void setProductList1(List<Product>Productlist1){
@@ -70,7 +70,9 @@ public class ShoppingList {
         float percentagem = 0;
         int list1 = ProductList1.size();
         int list2 = ProductList2.size();
-        percentagem = (list2*100) / list1;
+        int listas = list1 + list2;
+
+        percentagem = (list2*100) / listas;
         return percentagem;
     }
 

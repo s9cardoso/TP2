@@ -21,8 +21,38 @@ public class Main {
         Product product6 = new Product("bones","vermelho","picture","category3",10,"un");
         Product product7 = new Product("calçoes","puma","picture","category3",50,"un");
 
+        List<User> UserList = new ArrayList<>();
+        UserList.add(user1);
+        UserList.add(user3);
+
+        List<Product> newProductList1 = new ArrayList<>();
+        newProductList1.add(product1);
+        newProductList1.add(product2);
+        newProductList1.add(product3);
+        newProductList1.add(product4);
+        newProductList1.add(product5);
+
+        List<Product> newProductList2 = new ArrayList<>();
+        newProductList2.add(product6);
+        newProductList2.add(product7);
+
+        ShoppingList lista=new ShoppingList("Lista1",user1,newProductList1,newProductList2,UserList);
 
 
-        System.out.println(.toString());
+        // utilizadores que partilham a lista
+        System.out.println("Lista :");
+        for (int i = 0;i<UserList.size();i++){
+            System.out.println(UserList.get(i).getUsername());
+        }
+        //Nº de produtos + total dos produtos
+        System.out.println("nº produtos: " + lista.getTotalOfProducts() + ": preço" + lista.getTotalPrice());
+        System.out.println("nº produtos: " + lista.getTotalOfProductsOnShoppingCart() + "preço: " + lista.GetTotalPriceOnCart());
+
+        //percentagem total %
+        System.out.println(lista.getPercentageCompleted() + "%");
+
+
+
     }
 }
+
